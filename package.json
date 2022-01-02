@@ -1,0 +1,31 @@
+{
+  "name": "github-tweet-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebelopsio/github-tweet-action.git"
+  },
+  "scripts": {
+    "build": "ncc build src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebelopsio/github-tweet-action/issues"
+  },
+  "homepage": "https://github.com/rebelopsio/github-tweet-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1"
+  }
+}
