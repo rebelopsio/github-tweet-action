@@ -10,6 +10,7 @@ const client = new Twitter({
 });
 
 const repoName = github.context.payload.repository.full_name;
+const repoUrl = github.context.payload.repository.html_url;
 const { message } = github.context.payload.commits[0];
 
 async function run() {
@@ -17,7 +18,7 @@ async function run() {
     client.post(
       'statuses/update',
       {
-        status: `A new PR was merged into ${repoName}: ${message}`,
+        status: `A new PR was merged into ${repoName}: ${message} ${repoUrl}`,
       },
       (error, tweet, response) => {
         if (error) {
